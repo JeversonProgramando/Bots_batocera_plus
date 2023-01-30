@@ -1,0 +1,126 @@
+#!/bin/bash
+clear
+sleep 2
+echo -e "\e[35;1m#########################################################################"
+echo -e "\e[34;1m#########################################################################"
+echo -e "\e[33;1m#########################################################################"
+sleep 1
+echo ""
+echo ""
+echo ""
+
+echo -e "\e[32;1mprograma escrito por Jeverson Dias da Silva   (JC GAMES CLÁSSICOS) "
+sleep 3
+echo ""
+echo ""
+echo -e "\e[33;1m          JEVERSON!!!"
+echo -e "\e[33;1m      jjjjjjjjjjjjjjjjjj             jjjjjjjjjjjjjjjjj"
+echo "      jjjjjjjjjjjjjjjjjj             jjjjjjjjjjjjjjjjj                             "
+echo "            jjjjj                    jjjjj                                         "
+echo "            jjjjj                    jjjjj                                      "
+echo "    jjjjj   jjjjj                    jjjjj         CAUÃ !!!                  "
+echo "    jjjjjjjjjjjjj                    jjjjjjjjjjjjjjjjj               "
+echo "    jjjjjjjjjjjjj                    jjjjjjjjjjjjjjjjj   GAMES CLÁSSICOS ... "
+sleep 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo ""
+
+
+echo ""
+
+
+echo ""
+
+
+echo ""
+
+
+
+
+
+read -p "Qual o nome voce gostaria de colocar no jogo ?         :"
+#sleep 5
+echo ""
+echo ""
+echo ""
+
+echo "Seu jogo já está sendo compactado , assim que terminar volto ao sistema e subo um update na lista de jogos..."
+echo -e "\e[35;1m"
+sleep 6
+echo ""
+echo ""
+echo ""
+
+echo -e "\e[32;1"
+
+cat $REPLY | mksquashfs * "$REPLY".plus 
+sleep 2
+mv  "$REPLY.plus" /userdata/roms/windows/"$REPLY".plus
+
+
+sleep 3
+echo ""
+echo ""
+echo ""
+echo -e "\e[31;1m"
+echo "Seu jogo já está compactado e na pasta windows,"
+sleep 3
+echo "Vou subir um  update na lista de jogos..."
+sleep 3
+echo "Para voltar pra cá aperte Alt+Tab"
+
+echo ""
+ 
+echo ""
+
+sleep 3
+
+echo ""
+
+
+echo -e "\e[32;1m#ass:  JC GAMESCLÁSSICOS"
+sleep 2
+echo "Success."
+sleep 3
+
+emulationstation
+
+mouse-pointer =on
+
+                                                               
+sleep 5 
+
+
+exit
+
+
+

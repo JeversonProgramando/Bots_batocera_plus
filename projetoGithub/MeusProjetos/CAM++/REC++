@@ -1,0 +1,109 @@
+#!/bin/bash
+# Parceiros da Emulação 2020
+#participação Jeverson Dias Da Silva 2023 (JC GAMES CLÁSSICOS )
+clear
+sleep 2
+echo -e "\e[35;1m#########################################################################"
+echo -e "\e[34;1m#########################################################################"
+echo -e "\e[33;1m#########################################################################"
+echo -e "\e[32;1mColoque o nome na sua gravação !"
+sleep 2
+echo "."
+echo -e "\e[32;1mQuando quiser parar a gravação aperte a tecla    "  Q  " !"
+echo "."
+sleep 3
+echo -e "\e[32;1mA gravação ficará salva na pasta /userdata/screenshots !"
+echo "."
+sleep 3
+echo -e "\e[35;1mSEM ESPAÇO ENTRE AS LETRAS ..."
+sleep 2
+echo -e "\e[35;1mSEM ESPAÇO ENTRE AS LETRAS ..."
+sleep 2
+echo -e "\e[35;1mSEM ESPAÇO ENTRE AS LETRAS ..."
+echo -e "\e[32;1m."
+sleep 2
+read -p"Qual nome você gostaria de colocar na sua gravação Gamer ?   :   "
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@cat $REPLY | * "
+
+
+sleep 2
+echo "."
+echo "."
+echo "."
+echo "Sua gravação começará em   ..."
+echo "..."
+sleep 2
+echo -e "\e[30;1m5 segundos..."
+echo "..."
+sleep 1
+echo -e "\e[31;1m4 segundos..."
+echo "..."
+sleep 1
+echo -e "\e[35;1m3 segundos..."
+echo "..."
+sleep 1
+echo -e "\e[33;1m2 segundos ..."
+echo "..."
+sleep 1
+echo -e "\e[34;1m1 segundo..."
+echo "..."
+sleep 1
+
+echo -e "\e[30m"
+
+RES="$(xrandr | grep '*' | cut -d' ' -f 4)"
+FILE_NAME=/userdata/screenshots/$REPLY"_$(date +%F_%H-%M-%S).mp4"
+
+nice -20 ffmpeg -f x11grab -s $RES -r 30 -i :0.0 -c:v libx264rgb -qscale 0 -preset ultrafast -threads 2 -vol256 -y $FILE_NAME
+
+
+
+
+
+#/userdata/screenshots/ mv FILE_NAME  "$REPLY".mp4
+
+
+
+
+sleep 2
+echo -e "\e[32;1m."
+sleep 2
+echo "."
+
+echo -e "\e[32;1m.                                                          ...$REPLY salvo em /userdata/screenshots/"$REPLY."mp4"
+sleep 2
+echo "."
+sleep 2
+echo "."
+sleep 2
+echo "."
+sleep 2
+echo "Sucess!"
+sleep 2
+echo "."
+sleep 2
+echo "Agora vamos assistir o vídeo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+sleep 5
+echo -e "\e[33;1m"
+echo "Seu vídeo dará play em   ..."
+echo "..."
+sleep 2
+echo -e "\e[30;1m5 segundos..."
+echo "..."
+sleep 1
+echo -e "\e[31;1m4 segundos..."
+echo "..."
+sleep 1
+echo -e "\e[35;1m3 segundos..."
+echo "..."
+sleep 1
+echo -e "\e[33;1m2 segundos ..."
+echo "..."
+sleep 1
+echo -e "\e[34;1m1 segundo..."
+echo "..."
+sleep 1
+
+retroarch --config /userdata/system/configs/retroarch/retroarchcustom.cfg $FILE_NAME
